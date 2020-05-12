@@ -31,12 +31,12 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // your WordPress source
-        baseUrl: `mpaccione.com`,
+        baseUrl: `agencydb.giddyuppupsf.com`,
         protocol: `http`,
         // is it hosted on wordpress.com, or self-hosted?
         hostingWPCOM: false,
         // does your site use the Advanced Custom Fields Plugin?
-        useACF: false,
+        useACF: true,
       }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
