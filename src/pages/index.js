@@ -5,6 +5,55 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
+// OLD QUERY USING IMAGES - NOT WORKING
+// export const pageQuery = graphql`
+//   query {
+//     allWordpressPage {
+//       edges {
+//         node {
+//           id
+//           title
+//           excerpt
+//           slug
+//         }
+//       }
+//     }
+//     allWordpressPost {
+//       edges {
+//         node {
+//           title
+//           excerpt
+//           slug
+//           acf {
+//             team_members {
+//               value
+//               label
+//             }
+//             video_iframe
+//             viewing_link
+//             repo_link
+//             images {
+//               image {
+//                 localFile {
+//                   url
+//                 }
+//               }
+//             }
+//             gallery {
+//               localFile {
+//                 url
+//               }
+//               link
+//               source_url
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
+
+// NEW QUERY USING GALLERY - GALLERY APPEARS EMPTY
 export const pageQuery = graphql`
   query {
     allWordpressPage {
@@ -31,13 +80,12 @@ export const pageQuery = graphql`
             video_iframe
             viewing_link
             repo_link
-            images {
-              dummy
-              image {
-                localFile {
-                  url
-                }
+            gallery {
+              localFile {
+                url
               }
+              link
+              source_url
             }
           }
         }
